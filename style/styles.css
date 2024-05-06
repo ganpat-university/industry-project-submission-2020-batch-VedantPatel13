@@ -1,0 +1,853 @@
+ /* Bootstrap styling */
+ @import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+ *{
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /* Body Start */
+  body{
+  
+    background: #100D28;
+    background-size: cover;
+  overflow-wrap: normal;
+  }
+  /* Body End */
+  
+  /* General CSS Start */
+  
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* General CSS End */
+  
+
+ /* intro start */
+ .welcome {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 210px;
+  color: #FF007F;
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em; /* Adjust spacing as needed */
+  animation: typing 3s steps(40, end);
+  background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+  -webkit-background-clip: text; /* Apply background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+  -webkit-text-fill-color: transparent; /* Fill the text with the background color */
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+  /* loading animation start */ 
+.loader {
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    perspective: 800px;
+  }
+  
+  .inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 3px solid #050DEB;
+  }
+  
+  .inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 3px solid #8906E6;
+  }
+  
+  .inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 3px solid #FF00E2;
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
+
+  /* loading animation stop */ 
+   /* intro end */
+
+
+
+
+
+  /* Header Start */
+  header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  /* Gradient text color */
+.nav-item .nav-link {
+    background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.2em; /* Adjust this value as needed */
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    transform: translateY(5px); /* Adjust the distance of the animation */
+    font-weight: 700;
+  }
+  
+  /* Navbar styling */
+  
+  /* Links styling */
+  .nav-item {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 20px; /* Adjust the space between items */
+    opacity: 0; /* Initially hide the items */
+    animation: fadeInUp 0.5s ease forwards; /* Animation */
+  }
+  
+  /* Keyframes for animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Move from bottom to top */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Custom styling */
+  .nav-item a {
+    transition: text-shadow 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  }
+  
+  .nav-item a:hover {
+    background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+    /* Header End */
+
+
+
+/* Home section start */
+/* typing text animation */
+#home .typing-text {
+    padding-top: 138px;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em; /* Adjust spacing as needed */
+    animation: typing 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+    -webkit-background-clip: text; /* Apply background to the text */
+    background-clip: text;
+    color: transparent; /* Make the text transparent */
+    -webkit-text-fill-color: transparent; /* Fill the text with the background color */
+    font-weight: 700;
+    font-size: 35px;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+
+/*text animation*/
+#home h1{
+    color: #fff;
+    font-size: 20px;font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 20px;
+  }
+  
+  span{
+    color: #ff5757;
+  }
+
+
+#home p{ 
+    color: antiquewhite;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding-left: 20px;
+    text-align: justify;
+  
+}  
+
+#home .animate-bottom-to-top {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slide-up 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* Home section end */
+
+
+/* About section start */
+/*details start*/
+#about .title-wrapper{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+  -webkit-background-clip: text; /* Apply background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+  -webkit-text-fill-color: transparent; /* Fill the text with the background color */
+  position: relative;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+#about .wrapper-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 120px;
+  color: #737373;
+  opacity: 0.1; /* Set opacity to make it opaque */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top:-117px ;
+  animation: slideFromBottom 1s ease forwards;
+ 
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+/*details end*/
+
+/*personal details start*/
+#details .title-wrapper{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+  -webkit-background-clip: text; /* Apply background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+  .personal-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  
+  
+  }
+  
+
+/*personal details end*/
+
+/*skills start*/
+#skills{
+
+color: antiquewhite;
+
+}
+#skills .col-md-3 {
+  display: grid;
+  place-items: center;
+  padding-top: 30px;
+  
+}
+#skills .col-md-3 h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: antiquewhite;
+  text-transform: uppercase;
+  padding-top: 10px;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+.skills-wrapper{
+  border-top: 2px solid #737373;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.skills-wrapper h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(to left, #FF00E2 20%, #8906E6 20%, #050DEB 100%);
+  -webkit-background-clip: text; /* Apply background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+  -webkit-text-fill-color: transparent;
+  padding-top: 20px;
+}
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.progress-circle canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress-circle .percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+/*skills end*/
+
+/*experience start*/
+#experience .col-md-12 {
+  display: grid;
+  place-items: center;
+  padding-top: 50px;
+  
+}
+
+#experience .col-md-5{
+padding-top: 25px;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+#experience .col-md-5{
+  text-align: justify;
+}
+#experience .col-md-5 h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: antiquewhite;
+  padding-top: 20px;
+}
+#experience .col-md-5 h5{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: bisque;
+}
+#experience .col-md-5 p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: aliceblue;
+}
+#experience .col-md-5 span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+.experience-wrapper{
+  border-top: 2px solid #737373;
+
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.experience-wrapper h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+  -webkit-background-clip: text; /* Apply background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+  -webkit-text-fill-color: transparent;
+  padding-top: 20px;
+}
+/*experience end*/
+/* About section end */
+
+/* work section start */
+#work .title-wrapper{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #ff5757;
+  text-align: center;
+  position: relative;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+/*images layout*/
+/* Lazy Load Styles */
+.card{
+  background: aliceblue;
+}
+.card-image {
+	display: block;
+	min-height: 10rem; /* layout hack */
+	background-size: cover;
+	filter: blur(3px); /* blur the lowres image */
+}
+
+.card-image > img {
+	display: block;
+	width: 100%;
+	opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+}
+
+
+
+
+/* Layout Styles */
+
+.card-list {
+	display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.card {
+	display: inline-block;
+	width: 90%;
+	max-width: 20rem;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	transition: transform 0.1s ease-in-out;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+}
+
+.card-description {
+	display: block;
+	padding: 1em 0.5em;
+}
+
+.logoname {
+	margin: 10px;
+  font-size: 25px;
+  color: #050DEB ;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.resumeLink {
+  color: #ff5757;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+  
+}
+.resumeLink a{
+  color: antiquewhite;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none; 
+  background-color: #ff5757;
+  border: 2px solid #ff5757;
+  border-radius: 50px;
+  padding: 8px 12px; 
+  transition: background-color 0.3s; /* Adding smooth transition for background color */
+  animation: slideFromBottom 1s ease forwards;
+
+}
+
+.resumeLink a:hover {
+  background-color: transparent; /* Removing background color on hover */
+  transition: background-color 0.4s; /* Adding smooth transition for background color */
+  color: #ff5757;;
+}
+
+/* Animation for smooth transition */
+@keyframes removeBackgroundColor {
+  from {
+    background-color: #ff5757;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+  
+/* work section end */
+
+/*connect section start*/
+
+
+/* description start */
+.description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+.description.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes slideFromBottom {
+  to {
+    opacity: 1; /* Make the element visible */
+    transform: translateY(0); /* Move the element to its original position */
+  }
+}
+
+.description p{
+ color: antiquewhite;
+  text-align: justify; 
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 10px;
+  font-size: 15px;
+  margin-left: 190px;
+  font-weight: 400;
+}
+/* description end */
+
+/*details start*/
+.getintouch {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  background: linear-gradient(to left, #FF00E2 0%, #8906E6 50%, #050DEB 100%);
+  -webkit-background-clip: text; /* Apply background to the text */
+  background-clip: text;
+  color: transparent; /* Make the text transparent */
+  -webkit-text-fill-color: transparent; /* Fill the text with the background color */
+  position: relative;
+  animation: slideFromBottom 1s ease forwards;
+
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.connect {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 150px;
+  color: #737373;
+  opacity: 0.1; /* Set opacity to make it opaque */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top:-136px ;
+  animation: slideFromBottom 1s ease forwards;
+ 
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+
+
+/*details end*/
+
+/*Description start*/
+/* Define initial styles */
+.title{
+  opacity: 1; /* Initially hidden */
+  position: relative;
+  animation: slideFromBottom 1s ease forwards;
+}
+@keyframes slideFromBottom {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.title h3 {
+  color: #ff5757;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.title p {
+  color: antiquewhite;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: justify;
+}
+/*Description end*/
+
+/*contact start*/
+.contact h5{
+  color: #ff5757;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.contact h5 a{
+  color: antiquewhite;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none; 
+  background-color: #ff5757;
+  border: 2px solid #ff5757;
+  border-radius: 15px;
+  padding: 8px 12px; 
+  transition: background-color 0.3s; /* Adding smooth transition for background color */
+}
+.contact h5 a:hover {
+  background-color: transparent; /* Removing background color on hover */
+  transition: background-color 0.4s; /* Adding smooth transition for background color */
+  color: #ff5757;;
+}
+
+/* Animation for smooth transition */
+@keyframes removeBackgroundColor {
+  from {
+    background-color: #ff5757;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+/*contact end*/
+
+
+/*connect section end*/
