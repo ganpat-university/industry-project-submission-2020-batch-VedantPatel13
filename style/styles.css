@@ -3,7 +3,7 @@
  *{
     margin: 0;
     padding: 0;
-    
+   
   }
   
   /* Body Start */
@@ -11,7 +11,7 @@
   
     background: #100D28;
     background-size: cover;
-  overflow-wrap: normal;
+    overflow: auto;
   }
   /* Body End */
   
@@ -134,7 +134,7 @@
 
   /* Header Start */
   header{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -851,3 +851,34 @@ padding-top: 25px;
 
 
 /*connect section end*/
+
+
+/* Add this media query at the end of your CSS */
+
+@media (max-width: 768px) {
+  .welcome {
+    font-size: 30px;
+    margin-top: 150px;
+  }
+  
+  .typing-text {
+    font-size: 20px;
+  }
+  
+  .loader {
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+  }
+  #about .title-wrapper {
+    font-size: 40px;
+  }
+
+  #about .wrapper-2 {
+    font-size: 80px;
+    margin-top: -77px; /* Adjust margin as needed */
+  }
+
+
+}
